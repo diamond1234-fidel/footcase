@@ -1,0 +1,2272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Custom football-themed phone cases featuring your favorite clubs and players. Personalize your case today!">
+    <title>FootCase | Custom Football Phone Cases</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #1a3e72;
+            --secondary-color: #e63946;
+            --accent-color: #f4a261;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --gray-color: #6c757d;
+            --light-gray: #e9ecef;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            box-shadow: var(--box-shadow);
+        }
+
+        .cta-button:hover {
+            background-color: #c1121f;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(230, 57, 70, 0.3);
+        }
+
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            margin: 1rem auto;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--gray-color);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cart-icon {
+            position: relative;
+            font-size: 1.2rem;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 2rem;
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-height: 500px;
+            object-fit: contain;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 0;
+            background-color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            transition: var(--transition);
+            background-color: var(--light-color);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--box-shadow);
+        }
+
+        .feature-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-item h3 {
+            color: var(--primary-color);
+        }
+
+        /* Customization Section */
+        .customization {
+            padding: 5rem 0;
+            background-color: var(--light-color);
+        }
+
+        .customization-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .case-preview {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .preview-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #base-case {
+            max-height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px #000000);
+        }
+
+        .overlay-image {
+            position: absolute;
+            max-height: 80%;
+            max-width: 80%;
+            object-fit: contain;
+            transition: var(--transition);
+        }
+
+        .custom-text-element {
+            position: absolute;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            word-wrap: break-word;
+            max-width: 80%;
+            transition: var(--transition);
+        }
+
+        .zoom-controls {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .zoom-controls button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            color: var(--primary-color);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        .zoom-controls button:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .customization-options {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .option-group {
+            margin-bottom: 2rem;
+        }
+
+        .option-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .option-group select, .option-group input[type="text"], .option-group input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .option-group input[type="color"] {
+            width: 50px;
+            height: 40px;
+            padding: 2px;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+        }
+
+        .option-group select:focus, 
+        .option-group input[type="text"]:focus, 
+        .option-group input[type="file"]:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(26, 62, 114, 0.2);
+        }
+
+        .color-options {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .color-option {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 3px solid transparent;
+        }
+
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+
+        .color-option.active {
+            border-color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+
+        .text-options {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            align-items: center;
+        }
+
+        .text-options select {
+            flex: 1;
+        }
+
+        .upload-hint {
+            display: block;
+            margin-top: 5px;
+            color: var(--gray-color);
+            font-size: 0.8rem;
+        }
+
+        .club-options, .player-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .club-option, .player-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .club-option:hover, .player-option:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow);
+        }
+
+        .club-option img, .player-option img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 0.5rem;
+        }
+
+        .club-option span, .player-option span {
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .club-option.active, .player-option.active {
+            border-color: var(--secondary-color);
+            background-color: rgba(230, 57, 70, 0.1);
+        }
+
+        /* Price Section */
+        .price-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--light-gray);
+            position: relative;
+        }
+
+        .urgency-banner {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: var(--gray-color);
+            margin-left: 5px;
+            font-size: 0.9em;
+        }
+
+        .free-label {
+            background-color: #28a745;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            margin-left: 5px;
+        }
+
+        .price-details {
+            margin-bottom: 1.5rem;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-row.total {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--light-gray);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* Pre-designed Cases Section */
+        .pre-designed-section {
+            margin-top: 3rem;
+            padding: 2rem 0;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .pre-designed-cases {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .pre-designed-case {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .pre-designed-case:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .pre-designed-image {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background: var(--light-color);
+        }
+
+        .pre-designed-image img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .pre-designed-details {
+            padding: 1rem;
+        }
+
+        .pre-designed-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .pre-designed-price {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 5rem 0;
+            background-color: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial {
+            background-color: var(--light-color);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .testimonial:hover {
+            transform: translateY(-10px);
+        }
+
+        .stars {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .customer {
+            display: flex;
+            align-items: center;
+        }
+
+        .customer img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+
+        .customer span {
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: var(--gray-color);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray-color);
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Cart Modal */
+        .cart-items {
+            margin: 1.5rem 0;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item-img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-right: 1rem;
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-title {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .cart-item-options {
+            font-size: 0.9rem;
+            color: var(--gray-color);
+        }
+
+        .color-swatch {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-left: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .cart-item-price {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .cart-item-free {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .cart-item-remove {
+            color: var(--secondary-color);
+            background: none;
+            font-size: 1.2rem;
+            margin-left: 1rem;
+        }
+
+        .cart-total {
+            padding: 1.5rem 0;
+            font-size: 1rem;
+        }
+
+        .empty-cart-message {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--gray-color);
+        }
+
+        /* Checkout Modal */
+        .checkout-content {
+            max-width: 800px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(26, 62, 114, 0.2);
+        }
+
+        .order-summary {
+            background-color: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .summary-items {
+            margin: 1rem 0;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-total {
+            padding-top: 1rem;
+            margin-top: 1rem;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        /* Confirmation Modal */
+        .confirmation-content {
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .confirmation-icon {
+            font-size: 5rem;
+            color: #28a745;
+            margin-bottom: 1.5rem;
+        }
+
+        .order-details {
+            text-align: left;
+            margin-top: 2rem;
+            background-color: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .details-items {
+            margin: 1rem 0;
+        }
+
+        .details-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .shipping-info {
+            margin-top: 1.5rem;
+        }
+
+        .delivery-time {
+            font-style: italic;
+            color: var(--gray-color);
+            margin-top: 1rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hero .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-content {
+                padding-right: 0;
+                margin-bottom: 2rem;
+            }
+            
+            .customization-wrapper {
+                flex-direction: column;
+            }
+            
+            .preview-container {
+                height: 400px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                gap: 1rem;
+            }
+        
+            .club-options, .player-options {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .cta-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">FootCase</a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#customize">Customize</a>
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Show Your Football Passion</h1>
+                <p class="tagline">Get Your Personalized Football Phone Case</p>
+                <a href="#customize" class="cta-button">Customize Your Case</a>
+            </div>
+            <div class="hero-image">
+                <img src="case.png" alt="Custom football phone case" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Premium Quality Phone Cases</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Durable Protection</h3>
+                    <p>Shock-absorbent material protects your phone from drops and scratches.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Vibrant Prints</h3>
+                    <p>High-resolution printing that won't fade over time.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Perfect Fit</h3>
+                    <p>Precise cutouts for all buttons and ports.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization Section -->
+    <section id="customize" class="customization">
+        <div class="container">
+            <h2>Create Your Custom Football Case</h2>
+            
+            <!-- Urgency Banner -->
+            <div class="urgency-banner">
+                ⚡ LIMITED TIME OFFER: Only 237 free cases remaining this month! ⚡
+            </div>
+            
+            <div class="customization-wrapper">
+                <div class="case-preview">
+                    <div class="preview-container">
+                        <img id="base-case" style="display:none;" src="https://evryjewels.com/cdn/shop/files/UniversalPhoneBase_grande.png?v=1735841512" alt="Phone case template">
+                        <img id="club-logo" src="" alt="Club logo" class="overlay-image" style="display:none;">
+                        <img id="player-image" src="" alt="Player image" class="overlay-image" style="display:none;">
+                        <img id="custom-image" src="" alt="Custom image" class="overlay-image" style="display:none;">
+                        <div id="custom-text" class="custom-text-element" style="display:none;"></div>
+
+                    <div class="zoom-controls">
+                        <button id="zoom-in"><i class="fas fa-search-plus"></i></button>
+                        <button id="zoom-out"><i class="fas fa-search-minus"></i></button>
+                        <button id="reset-zoom"><i class="fas fa-expand"></i></button>
+                    </div>
+                    </div>
+                </div>
+                <div class="customization-options">
+                    <div class="option-group">
+                    <label for="phone-model">Phone Model:</label>
+                    <select id="phone-model">
+                        <!-- Apple -->
+                        <option value="iphone-14-pro-max">iPhone 14 Pro Max</option>
+                        <option value="iphone-14-pro">iPhone 14 Pro</option>
+                        <option value="iphone-14">iPhone 14</option>
+                        <option value="iphone-13-pro-max">iPhone 13 Pro Max</option>
+                        <option value="iphone-13-pro">iPhone 13 Pro</option>
+                        <option value="iphone-13">iPhone 13</option>
+                        <option value="iphone-12-pro-max">iPhone 12 Pro Max</option>
+                        <option value="iphone-12-pro">iPhone 12 Pro</option>
+                        <option value="iphone-12">iPhone 12</option>
+                        <option value="iphone-11-pro-max">iPhone 11 Pro Max</option>
+                        <option value="iphone-11-pro">iPhone 11 Pro</option>
+                        <option value="iphone-11">iPhone 11</option>
+                        <option value="iphone-se-2020">iPhone SE (2020)</option>
+                        <option value="iphone-xr">iPhone XR</option>
+                        <option value="iphone-xs-max">iPhone XS Max</option>
+                        <option value="iphone-xs">iPhone XS</option>
+                        <option value="iphone-x">iPhone X</option>
+                        <option value="iphone-8-plus">iPhone 8 Plus</option>
+                        <option value="iphone-8">iPhone 8</option>
+
+                        <!-- Samsung -->
+                        <option value="samsung-galaxy-s22-ultra">Samsung Galaxy S22 Ultra</option>
+                        <option value="samsung-galaxy-s22-plus">Samsung Galaxy S22 Plus</option>
+                        <option value="samsung-galaxy-s22">Samsung Galaxy S22</option>
+                        <option value="samsung-galaxy-s21-ultra">Samsung Galaxy S21 Ultra</option>
+                        <option value="samsung-galaxy-s21-plus">Samsung Galaxy S21 Plus</option>
+                        <option value="samsung-galaxy-s21">Samsung Galaxy S21</option>
+                        <option value="samsung-galaxy-note-20-ultra">Samsung Galaxy Note 20 Ultra</option>
+                        <option value="samsung-galaxy-note-20">Samsung Galaxy Note 20</option>
+                        <option value="samsung-galaxy-s20-ultra">Samsung Galaxy S20 Ultra</option>
+                        <option value="samsung-galaxy-s20-plus">Samsung Galaxy S20 Plus</option>
+                        <option value="samsung-galaxy-s20">Samsung Galaxy S20</option>
+                        <option value="samsung-galaxy-s10-plus">Samsung Galaxy S10 Plus</option>
+                        <option value="samsung-galaxy-s10">Samsung Galaxy S10</option>
+                        <option value="samsung-galaxy-z-fold-4">Samsung Galaxy Z Fold 4</option>
+                        <option value="samsung-galaxy-z-flip-4">Samsung Galaxy Z Flip 4</option>
+                        <option value="samsung-galaxy-a52">Samsung Galaxy A52</option>
+                        <option value="samsung-galaxy-a72">Samsung Galaxy A72</option>
+                        <option value="samsung-galaxy-a51">Samsung Galaxy A51</option>
+                        <option value="samsung-galaxy-a32">Samsung Galaxy A32</option>
+                        <option value="samsung-galaxy-a12">Samsung Galaxy A12</option>
+                        <option value="samsung-galaxy-a13">Samsung Galaxy A13</option>
+                        <option value="samsung-galaxy-a22">Samsung Galaxy A22</option>
+                        <option value="samsung-galaxy-a02">Samsung Galaxy A02</option>
+
+                        <!-- Google -->
+                        <option value="google-pixel-7-pro">Google Pixel 7 Pro</option>
+                        <option value="google-pixel-7">Google Pixel 7</option>
+                        <option value="google-pixel-6-pro">Google Pixel 6 Pro</option>
+                        <option value="google-pixel-6">Google Pixel 6</option>
+                        <option value="google-pixel-5a">Google Pixel 5a</option>
+                        <option value="google-pixel-5">Google Pixel 5</option>
+                        <option value="google-pixel-4a">Google Pixel 4a</option>
+                        <option value="google-pixel-4">Google Pixel 4</option>
+                        <option value="google-pixel-3a">Google Pixel 3a</option>
+                        <option value="google-pixel-3">Google Pixel 3</option>
+
+                        <!-- OnePlus -->
+                        <option value="oneplus-9-pro">OnePlus 9 Pro</option>
+                        <option value="oneplus-9">OnePlus 9</option>
+                        <option value="oneplus-8-pro">OnePlus 8 Pro</option>
+                        <option value="oneplus-8">OnePlus 8</option>
+                        <option value="oneplus-7-pro">OnePlus 7 Pro</option>
+                        <option value="oneplus-7">OnePlus 7</option>
+                        <option value="oneplus-nord-2">OnePlus Nord 2</option>
+                        <option value="oneplus-nord-ce">OnePlus Nord CE</option>
+
+                        <!-- Xiaomi -->
+                        <option value="xiaomi-mi-11-ultra">Xiaomi Mi 11 Ultra</option>
+                        <option value="xiaomi-mi-11">Xiaomi Mi 11</option>
+                        <option value="xiaomi-redmi-note-10-pro">Xiaomi Redmi Note 10 Pro</option>
+                        <option value="xiaomi-redmi-note-10">Xiaomi Redmi Note 10</option>
+                        <option value="xiaomi-redmi-note-9">Xiaomi Redmi Note 9</option>
+                        <option value="xiaomi-redmi-9">Xiaomi Redmi 9</option>
+                        <option value="xiaomi-mi-10">Xiaomi Mi 10</option>
+                        <option value="xiaomi-mi-9">Xiaomi Mi 9</option>
+
+                        <!-- Oppo -->
+                        <option value="oppo-reno-6-pro">Oppo Reno 6 Pro</option>
+                        <option value="oppo-reno-5-pro">Oppo Reno 5 Pro</option>
+                        <option value="oppo-f19-pro">Oppo F19 Pro</option>
+                        <option value="oppo-a54">Oppo A54</option>
+                        <option value="oppo-a53">Oppo A53</option>
+                        <option value="oppo-a52">Oppo A52</option>
+
+                        <!-- Huawei -->
+                        <option value="huawei-p40-pro">Huawei P40 Pro</option>
+                        <option value="huawei-p40">Huawei P40</option>
+                        <option value="huawei-p30-pro">Huawei P30 Pro</option>
+                        <option value="huawei-p30">Huawei P30</option>
+                        <option value="huawei-mate-40-pro">Huawei Mate 40 Pro</option>
+                        <option value="huawei-mate-30-pro">Huawei Mate 30 Pro</option>
+
+                        <!-- Motorola -->
+                        <option value="motorola-edge-plus">Motorola Edge Plus</option>
+                        <option value="motorola-edge">Motorola Edge</option>
+                        <option value="motorola-one-5g">Motorola One 5G</option>
+
+                        <!-- Realme -->
+                        <option value="realme-8">Realme 8</option>
+                        <option value="realme-7">Realme 7</option>
+                        <option value="realme-6">Realme 6</option>
+
+                        <!-- Sony -->
+                        <option value="sony-xperia-1-ii">Sony Xperia 1 II</option>
+                        <option value="sony-xperia-5-ii">Sony Xperia 5 II</option>
+                        <option value="sony-xperia-10-ii">Sony Xperia 10 II</option>
+
+                        <!-- LG -->
+                        <option value="lg-v60-thinq">LG V60 ThinQ</option>
+                        <option value="lg-g8x-thinq">LG G8X ThinQ</option>
+
+                        <!-- Asus -->
+                        <option value="asus-rog-phone-5">Asus ROG Phone 5</option>
+                        <option value="asus-zenfone-8">Asus ZenFone 8</option>
+                        <option value="asus-rog-phone-3">Asus ROG Phone 3</option>
+
+                        <!-- Nokia -->
+                        <option value="nokia-8.3-5g">Nokia 8.3 5G</option>
+                        <option value="nokia-7.2">Nokia 7.2</option>
+                        <option value="nokia-5.3">Nokia 5.3</option>
+
+                        <!-- Others -->
+                        <option value="vivo-v21">Vivo V21</option>
+                        <option value="vivo-v20">Vivo V20</option>
+                        <option value="infinix-zero-8">Infinix Zero 8</option>
+                        <option value="infinix-hot-10">Infinix Hot 10</option>
+                        <option value="tecno-camon-17">Tecno Camon 17</option>
+                        <option value="tecno-phantom-9">Tecno Phantom 9</option>
+                    </select>
+                </div>
+
+                    
+                    <div class="option-group"style="display:none;" >
+                        <label for="case-color">Case Color:</label>
+                        <div class="color-options">
+                            <div class="color-option" data-color="#000000" style="background-color: #000000;" title="Black"></div>
+                            <div class="color-option" data-color="#ffffff" style="background-color: #ffffff; border: 1px solid #ccc;" title="White"></div>
+                            <div class="color-option" data-color="#1a3e72" style="background-color: #1a3e72;" title="Navy Blue"></div>
+                            <div class="color-option" data-color="#e63946" style="background-color: #e63946;" title="Red"></div>
+                            <div class="color-option" data-color="#f4a261" style="background-color: #f4a261;" title="Orange"></div>
+                            <div class="color-option" data-color="#2a9d8f" style="background-color: #2a9d8f;" title="Teal"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="option-group" style="display:none;">
+                        <label for="custom-text-input" >Custom Text:</label>
+                        <input type="text" id="custom-text-input" placeholder="Enter your custom text">
+                        <div class="text-options">
+                            <input type="color" id="text-color" value="#ffffff">
+                            <select id="text-font">
+                                <option value="Arial">Arial</option>
+                                <option value="Times New Roman">Times New Roman</option>
+                                <option value="Courier New">Courier New</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Verdana">Verdana</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="option-group">
+                        <label>Choose Your Player:</label>
+                        <div class="club-options">
+                            <div class="club-option" data-club="https://img.kwcdn.com/product/open/e57f2fc89c404f489842cc6647fdea0b-goods.jpeg?imageView2/2/w/1300/q/90/format/webp">
+                                <img src="https://img.kwcdn.com/product/open/e57f2fc89c404f489842cc6647fdea0b-goods.jpeg?imageView2/2/w/1300/q/90/format/webp" alt="Cristiano Ronaldo">
+                                <span>Ronaldo</span>
+                            </div>
+                            <div class="club-option" data-club="https://img.kwcdn.com/product/open/be021ac698764cc7b35493848450f264-goods.jpeg?imageView2/2/w/1300/q/90/format/webp">
+                                <img src="https://img.kwcdn.com/product/open/be021ac698764cc7b35493848450f264-goods.jpeg?imageView2/2/w/1300/q/90/format/webp" alt="Lionel Messi">
+                                <span>Messi</span>
+                            </div>
+                            <div class="club-option" data-club="https://img.kwcdn.com/product/open/ae72195384fc42f6857c16bdf19f5a3b-goods.jpeg?imageView2/2/w/1300/q/90/format/webp">
+                                <img src="https://img.kwcdn.com/product/open/ae72195384fc42f6857c16bdf19f5a3b-goods.jpeg?imageView2/2/w/1300/q/90/format/webp" alt="Neymar">
+                                <span>Neymar</span>
+                            </div>
+                            <div class="club-option" data-club="https://img.kwcdn.com/product/open/541576637a9d40fc8daf92806858dcde-goods.jpeg?imageView2/2/w/1300/q/90/format/webp">
+                                <img src="https://img.kwcdn.com/product/open/541576637a9d40fc8daf92806858dcde-goods.jpeg?imageView2/2/w/1300/q/90/format/webp" alt="Mbappé">
+                                <span>Mbappé</span>
+                            </div>
+                            <div class="club-option" data-club="https://img.kwcdn.com/product/open/fddf1fbbc7294396a0f3ecf556b6b49b-goods.jpeg?imageView2/2/w/1300/q/90/format/webp">
+                                <img src="https://img.kwcdn.com/product/open/fddf1fbbc7294396a0f3ecf556b6b49b-goods.jpeg?imageView2/2/w/1300/q/90/format/webp" alt="Mohamed Salah">
+                                <span>Salah</span>
+                            </div>
+                            <div class="club-option" data-club="https://img.kwcdn.com/product/open/fddf1fbbc7294396a0f3ecf556b6b49b-goods.jpeg?imageView2/2/w/1300/q/90/format/webp">
+                                <img src="https://img.kwcdn.com/product/open/fddf1fbbc7294396a0f3ecf556b6b49b-goods.jpeg?imageView2/2/w/1300/q/90/format/webp" alt="Erling Haaland">
+                                <span>Haaland</span>
+                            </div>
+                        </div>
+
+                        <br>
+                    <div class="option-group" style="display:none;">
+                        <label for="image-upload">Upload Your Image:</label>
+                        <input type="file" id="image-upload" accept="image/*">
+                        <small class="upload-hint">Max file size: 5MB</small>
+                    </div>
+                    
+            <div class="price-section">
+                <div class="price-details">
+                    <div class="price-row">
+                        <span>Case:</span>
+                        <span class="first-case-price">FREE <span class="original-price">$24.99</span></span>
+                    </div>
+                    <div class="price-row additional-cases" style="display:none;">
+                        <span>Additional Cases:</span>
+                        <span class="additional-price">$13.00 each</span>
+                    </div>
+                    <div class="price-row" style="display:none;">
+                        <span>Shipping:</span>
+                        <span class="shipping">$9.95</span>
+                    </div>
+                    <div class="price-row total">
+                        <span>Total:</span>
+                        <span class="total-price">$9.95</span>
+                    </div>
+                </div>
+                <button id="add-to-cart" class="cta-button">Add to Cart</button>
+            </div>
+
+        </div>
+
+
+                </div>
+
+
+            </div>
+            <!-- Pre-designed Cases Section -->
+
+
+            
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The quality is amazing! My Barcelona case gets compliments everywhere I go."</p>
+                    <div class="customer">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer">
+                        <span>Alex M.</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Perfect fit for my iPhone and the Ronaldo print looks even better in person."</p>
+                    <div class="customer">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer">
+                        <span>Sarah K.</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"Great customer service and fast shipping. Will definitely order again!"</p>
+                    <div class="customer">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Customer">
+                        <span>James L.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>FootCase</h3>
+                    <p>Show your football passion with our custom phone cases featuring your favorite clubs and players.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#customize">Customize</a></li>
+                        <li><a href="#" class="cart-link">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@footcase.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 FootCase. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Your Cart</h2>
+            <div class="cart-items">
+                <!-- Cart items will be added here dynamically -->
+                <p class="empty-cart-message">Your cart is empty</p>
+            </div>
+            <div class="cart-total">
+                <div class="price-row">
+                    <span>Subtotal:</span>
+                    <span class="subtotal-amount">$0.00</span>
+                </div>
+                <div class="price-row">
+                    <span>Shipping:</span>
+                    <span class="shipping-amount">$9.95</span>
+                </div>
+                <div class="price-row total">
+                    <span>Total:</span>
+                    <span class="total-amount">$9.95</span>
+                </div>
+            </div>
+            <button id="checkout-btn" class="cta-button">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content checkout-content">
+            <span class="close-modal">&times;</span>
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Shipping Address</label>
+                    <textarea id="address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" required>
+                </div>
+                <div class="form-group">
+                    <label for="zip">ZIP Code</label>
+                    <input type="text" id="zip" required>
+                </div>
+                
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-items">
+                        <!-- Order items will be added here dynamically -->
+                    </div>
+                    <div class="summary-total">
+                        <div class="price-row">
+                            <span>Subtotal:</span>
+                            <span class="summary-subtotal">$0.00</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Shipping:</span>
+                            <span class="summary-shipping">$9.95</span>
+                        </div>
+                        <div class="price-row total">
+                            <span>Total:</span>
+                            <span class="summary-total-amount">$9.95</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="button" id="pay-now" class="cta-button">Pay Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content confirmation-content">
+            <span class="close-modal">&times;</span>
+            <div class="confirmation-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Thank You For Your Order!</h2>
+            <p>Your order has been placed successfully.</p>
+            <div class="order-details">
+                <h3>Order Details</h3>
+                <div class="details-items">
+                    <!-- Order details will be added here dynamically -->
+                </div>
+                <div class="shipping-info">
+                    <h3>Shipping Information</h3>
+                    <div id="shipping-details">
+                        <!-- Shipping details will be added here dynamically -->
+                    </div>
+                </div>
+                <p class="delivery-time">Estimated delivery: 5-7 business days</p>
+            </div>
+            <button id="continue-shopping" class="cta-button">Continue Shopping</button>
+        </div>
+    </div>
+
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // DOM Elements
+        const cartIcon = document.querySelector('.cart-icon');
+        const cartCount = document.querySelector('.cart-count');
+        const cartModal = document.getElementById('cart-modal');
+        const checkoutModal = document.getElementById('checkout-modal');
+        const confirmationModal = document.getElementById('confirmation-modal');
+        const closeModalButtons = document.querySelectorAll('.close-modal');
+        const addToCartBtn = document.getElementById('add-to-cart');
+        const checkoutBtn = document.getElementById('checkout-btn');
+        const payNowBtn = document.getElementById('pay-now');
+        const continueShoppingBtn = document.getElementById('continue-shopping');
+        const cartItemsContainer = document.querySelector('.cart-items');
+        
+        // Product customization elements
+        const phoneModelSelect = document.getElementById('phone-model');
+        const colorOptions = document.querySelectorAll('.color-option');
+        const customTextInput = document.getElementById('custom-text-input');
+        const textColorInput = document.getElementById('text-color');
+        const textFontSelect = document.getElementById('text-font');
+        const imageUpload = document.getElementById('image-upload');
+        const clubOptions = document.querySelectorAll('.club-option');
+        const playerOptions = document.querySelectorAll('.player-option');
+        const clubLogo = document.getElementById('club-logo');
+        const playerImage = document.getElementById('player-image');
+        const customImage = document.getElementById('custom-image');
+        const customTextElement = document.getElementById('custom-text');
+        const zoomInBtn = document.getElementById('zoom-in');
+        const zoomOutBtn = document.getElementById('zoom-out');
+        const resetZoomBtn = document.getElementById('reset-zoom');
+        
+        // Price elements
+        const firstCasePriceElement = document.querySelector('.first-case-price');
+        const additionalCasesElement = document.querySelector('.additional-cases');
+        const shippingElement = document.querySelector('.shipping');
+        const totalPriceElement = document.querySelector('.total-price');
+        
+        // State
+        let cart = [];
+        let currentZoom = 1;
+        let selectedColor = '#000000';
+        let customImageFile = null;
+        let freeCasesRemaining = 237; // Starting count of free cases
+        
+        // Initialize
+        updateCartCount();
+        updatePriceDisplay();
+        updateUrgencyBanner();
+
+        // Event Listeners
+        cartIcon.addEventListener('click', openCartModal);
+        addToCartBtn.addEventListener('click', addToCart);
+        checkoutBtn.addEventListener('click', openCheckoutModal);
+        payNowBtn.addEventListener('click', processPayment);
+        continueShoppingBtn.addEventListener('click', continueShopping);
+        
+        closeModalButtons.forEach(button => {
+            button.addEventListener('click', closeModal);
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target === cartModal) {
+                closeModal();
+            }
+            if (event.target === checkoutModal) {
+                closeModal();
+            }
+            if (event.target === confirmationModal) {
+                closeModal();
+            }
+        });
+        
+        // Product customization event listeners
+        colorOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                selectedColor = this.getAttribute('data-color');
+                document.getElementById('base-case').style.filter = `drop-shadow(0 0 10px ${selectedColor})`;
+                colorOptions.forEach(opt => opt.classList.remove('active'));
+                this.classList.add('active');
+            });
+            
+            // Double click to remove color selection
+            option.addEventListener('dblclick', function() {
+                if (this.classList.contains('active')) {
+                    this.classList.remove('active');
+                    selectedColor = '#000000'; // Reset to default
+                    document.getElementById('base-case').style.filter = 'drop-shadow(0 0 10px #000000)';
+                }
+            });
+        });
+        
+        // Initialize with black color selected
+        document.querySelector('.color-option[data-color="#000000"]').classList.add('active');
+        
+        customTextInput.addEventListener('input', function() {
+            const text = this.value;
+            if (text) {
+                customTextElement.textContent = text;
+                customTextElement.style.display = 'block';
+                customTextElement.style.color = textColorInput.value;
+                customTextElement.style.fontFamily = textFontSelect.value;
+            } else {
+                customTextElement.style.display = 'none';
+            }
+        });
+        
+        textColorInput.addEventListener('input', function() {
+            customTextElement.style.color = this.value;
+        });
+        
+        textFontSelect.addEventListener('change', function() {
+            customTextElement.style.fontFamily = this.value;
+        });
+        
+        imageUpload.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                if (file.size > 5 * 1024 * 1024) {
+                    alert('File size should be less than 5MB');
+                    return;
+                }
+                
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    customImage.src = event.target.result;
+                    customImage.style.display = 'block';
+                    customImageFile = file;
+                    
+                    // Disable club and player selection when custom image is uploaded
+                    clubOptions.forEach(option => {
+                        option.classList.remove('active');
+                        option.style.pointerEvents = 'none';
+                        option.style.opacity = '0.5';
+                    });
+                    
+                    playerOptions.forEach(option => {
+                        option.classList.remove('active');
+                        option.style.pointerEvents = 'none';
+                        option.style.opacity = '0.5';
+                    });
+                    
+                    clubLogo.style.display = 'none';
+                    playerImage.style.display = 'none';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        clubOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                // If custom image is uploaded, don't allow club selection
+                if (customImageFile) return;
+                
+                const club = this.getAttribute('data-club');
+                updateClubSelection(club);
+                
+                // Disable player selection when club is selected
+                playerOptions.forEach(opt => {
+                    opt.classList.remove('active');
+                    opt.style.pointerEvents = 'none';
+                    opt.style.opacity = '0.5';
+                });
+                
+                playerImage.style.display = 'none';
+            });
+        });
+        
+        playerOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                // If custom image is uploaded, don't allow player selection
+                if (customImageFile) return;
+                
+                const player = this.getAttribute('data-player');
+                updatePlayerSelection(player);
+                
+                // Disable club selection when player is selected
+                clubOptions.forEach(opt => {
+                    opt.classList.remove('active');
+                    opt.style.pointerEvents = 'none';
+                    opt.style.opacity = '0.5';
+                });
+                
+                clubLogo.style.display = 'none';
+            });
+        });
+        
+        // Zoom controls
+        zoomInBtn.addEventListener('click', function() {
+            currentZoom += 0.1;
+            updateZoom();
+        });
+        
+        zoomOutBtn.addEventListener('click', function() {
+            if (currentZoom > 0.5) {
+                currentZoom -= 0.1;
+                updateZoom();
+            }
+        });
+        
+        resetZoomBtn.addEventListener('click', function() {
+            currentZoom = 1;
+            updateZoom();
+        });
+        
+        // Pre-designed cases click handler
+        document.querySelectorAll('.pre-designed-case').forEach(caseItem => {
+            caseItem.addEventListener('click', function() {
+                const design = this.getAttribute('data-design');
+                const designName = this.querySelector('.pre-designed-title').textContent;
+                const designImage = this.querySelector('img').src;
+                
+                // Check if we still have free cases available
+                if (freeCasesRemaining <= 0) {
+                    alert('Sorry, all free cases have been claimed this month!');
+                    return;
+                }
+                
+                // Create cart item for pre-designed case
+                const item = {
+                    id: Date.now(),
+                    phoneModel: 'iphone-13', // Default model
+                    phoneModelText: 'iPhone 13',
+                    isPreDesigned: true,
+                    designName: designName,
+                    designImage: designImage,
+                    price: cart.length === 0 ? 0 : 13, // First is free
+                    quantity: 1,
+                    isFree: cart.length === 0
+                };
+                
+                cart.push(item);
+                if (item.isFree) {
+                    freeCasesRemaining--;
+                }
+                updatePriceDisplay();
+                updateCartCount();
+                renderCartItems();
+                openCartModal();
+                updateUrgencyBanner();
+            });
+        });
+
+        // Functions
+        function openCartModal() {
+            renderCartItems();
+            cartModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function openCheckoutModal() {
+            renderCheckoutSummary();
+            checkoutModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            cartModal.style.display = 'none';
+        }
+        
+        function closeModal() {
+            cartModal.style.display = 'none';
+            checkoutModal.style.display = 'none';
+            confirmationModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        function continueShopping() {
+            closeModal();
+            window.location.href = '#customize';
+        }
+        
+        function updateClubSelection(club) {
+            // Update active state
+            clubOptions.forEach(option => {
+                option.classList.remove('active');
+                option.style.pointerEvents = 'auto';
+                option.style.opacity = '1';
+                if (option.getAttribute('data-club') === club) {
+                    option.classList.add('active');
+                }
+            });
+            
+            // Update preview
+            const clubImg = document.querySelector(`.club-option[data-club="${club}"] img`);
+            clubLogo.src = clubImg.src;
+            clubLogo.style.display = 'block';
+        }
+        
+        function updatePlayerSelection(player) {
+            // Update active state
+            playerOptions.forEach(option => {
+                option.classList.remove('active');
+                option.style.pointerEvents = 'auto';
+                option.style.opacity = '1';
+                if (option.getAttribute('data-player') === player) {
+                    option.classList.add('active');
+                }
+            });
+            
+            // Update preview
+            const playerImg = document.querySelector(`.player-option[data-player="${player}"] img`);
+            playerImage.src = playerImg.src;
+            playerImage.style.display = 'block';
+        }
+        
+        function updateZoom() {
+            clubLogo.style.transform = `scale(${currentZoom})`;
+            playerImage.style.transform = `scale(${currentZoom})`;
+            customImage.style.transform = `scale(${currentZoom})`;
+            customTextElement.style.transform = `scale(${currentZoom})`;
+        }
+        
+        function addToCart() {
+            const phoneModel = phoneModelSelect.value;
+            const phoneModelText = phoneModelSelect.options[phoneModelSelect.selectedIndex].text;
+            
+            // Check if we still have free cases available
+            if (freeCasesRemaining <= 0 && cart.length === 0) {
+                alert('Sorry, all free cases have been claimed this month!');
+                return;
+            }
+            
+            // Get selected club
+            let selectedClub = '';
+            let selectedClubText = '';
+            clubOptions.forEach(option => {
+                if (option.classList.contains('active')) {
+                    selectedClub = option.getAttribute('data-club');
+                    selectedClubText = option.querySelector('span').textContent;
+                }
+            });
+            
+            // Get selected player
+            let selectedPlayer = '';
+            let selectedPlayerText = '';
+            playerOptions.forEach(option => {
+                if (option.classList.contains('active')) {
+                    selectedPlayer = option.getAttribute('data-player');
+                    selectedPlayerText = option.querySelector('span').textContent;
+                }
+            });
+            
+            // Get custom text
+            const customText = customTextInput.value;
+            
+            // Validate selection
+            if (!selectedClub && !selectedPlayer && !customText && !customImageFile) {
+                alert('Please select a club, player, add custom text, or upload an image');
+                return;
+            }
+            
+            // Create cart item
+            const item = {
+                id: Date.now(),
+                phoneModel,
+                phoneModelText,
+                club: selectedClub,
+                clubText: selectedClubText,
+                player: selectedPlayer,
+                playerText: selectedPlayerText,
+                customText,
+                textColor: textColorInput.value,
+                textFont: textFontSelect.value,
+                caseColor: selectedColor,
+                customImage: customImageFile ? customImage.src : null,
+                price: cart.length === 0 ? 0 : 13, // First is free
+                quantity: 1,
+                isFree: cart.length === 0
+            };
+            
+            // Add to cart
+            cart.push(item);
+            if (item.isFree) {
+                freeCasesRemaining--;
+            }
+            updatePriceDisplay();
+            updateCartCount();
+            renderCartItems();
+            openCartModal();
+            updateUrgencyBanner();
+            
+            // Reset custom image after adding to cart
+            if (customImageFile) {
+                imageUpload.value = '';
+                customImage.src = '';
+                customImage.style.display = 'none';
+                customImageFile = null;
+                
+                // Re-enable club and player selection
+                clubOptions.forEach(option => {
+                    option.style.pointerEvents = 'auto';
+                    option.style.opacity = '1';
+                });
+                
+                playerOptions.forEach(option => {
+                    option.style.pointerEvents = 'auto';
+                    option.style.opacity = '1';
+                });
+            }
+        }
+        
+        function updateCartCount() {
+            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+            cartCount.textContent = totalItems;
+        }
+        
+        function updatePriceDisplay() {
+            if (cart.length === 0) {
+                firstCasePriceElement.innerHTML = 'FREE <span class="original-price">$24.99</span>';
+                additionalCasesElement.style.display = 'none';
+                shippingElement.textContent = '$9.95';
+                totalPriceElement.textContent = '$9.95';
+            } else {
+                firstCasePriceElement.innerHTML = '$13.00 <span class="original-price">$24.99</span>';
+                additionalCasesElement.style.display = 'flex';
+                
+                // Calculate total
+                const shipping = 9.95;
+                let subtotal = 0;
+                
+                // First case is free, additional cases are $13 each
+                subtotal = Math.max(0, cart.length - 1) * 13;
+                
+                const total = subtotal + shipping;
+                totalPriceElement.textContent = '$' + total.toFixed(2);
+            }
+        }
+        
+        function updateUrgencyBanner() {
+            const banner = document.querySelector('.urgency-banner');
+            banner.textContent = `⚡ LIMITED TIME OFFER: Only ${freeCasesRemaining} free cases remaining this month! ⚡`;
+        }
+        
+        function renderCartItems() {
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="empty-cart-message">Your cart is empty</p>';
+                document.querySelector('.cart-total').style.display = 'none';
+                checkoutBtn.style.display = 'none';
+                return;
+            }
+            
+            document.querySelector('.cart-total').style.display = 'block';
+            checkoutBtn.style.display = 'block';
+            
+            cartItemsContainer.innerHTML = '';
+            
+            cart.forEach((item, index) => {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.dataset.id = item.id;
+                
+                let designText = '';
+                if (item.isPreDesigned) {
+                    designText = `Pre-designed: ${item.designName}`;
+                } else if (item.club && item.player) {
+                    designText = `${item.clubText} & ${item.playerText}`;
+                } else if (item.club) {
+                    designText = item.clubText;
+                } else if (item.player) {
+                    designText = item.playerText;
+                } else if (item.customText) {
+                    designText = `Custom Text: "${item.customText}"`;
+                } else if (item.customImage) {
+                    designText = `Custom Image`;
+                }
+                
+                cartItem.innerHTML = `
+                    <img src="${item.isPreDesigned ? item.designImage : 
+                        (item.customImage ? item.customImage : 
+                        (item.club ? `https://example.com/images/clubs/${item.club}.png` : 
+                        `https://example.com/images/players/${item.player}.png`))}" 
+                        alt="Cart item" class="cart-item-img">
+                    <div class="cart-item-details">
+                        <div class="cart-item-title">${item.phoneModelText} Case</div>
+                        <div class="cart-item-options">${designText} | Color: <span class="color-swatch" style="background-color: ${item.caseColor || '#000000'};"></span></div>
+                    </div>
+                    <div class="${item.isFree ? 'cart-item-free' : 'cart-item-price'}">
+                        ${item.isFree ? 'FREE' : '$' + item.price.toFixed(2)}
+                    </div>
+                    <button class="cart-item-remove"><i class="fas fa-times"></i></button>
+                `;
+                
+                // Add event listener for remove button
+                const removeBtn = cartItem.querySelector('.cart-item-remove');
+                removeBtn.addEventListener('click', () => removeCartItem(item.id, index));
+                
+                cartItemsContainer.appendChild(cartItem);
+            });
+            
+            // Update totals
+            const subtotal = cart.reduce((sum, item) => sum + item.price, 0);
+            const shipping = 9.95;
+            const total = subtotal + shipping;
+            
+            document.querySelector('.subtotal-amount').textContent = '$' + subtotal.toFixed(2);
+            document.querySelector('.shipping-amount').textContent = '$' + shipping.toFixed(2);
+            document.querySelector('.total-amount').textContent = '$' + total.toFixed(2);
+        }
+        
+        function removeCartItem(id, index) {
+            const removedItem = cart.find(item => item.id === id);
+            if (removedItem && removedItem.isFree) {
+                freeCasesRemaining++;
+            }
+            
+            cart = cart.filter(item => item.id !== id);
+            
+            // If we removed a free item, the next item should now be free
+            if (removedItem && removedItem.isFree && cart.length > 0) {
+                // Find the first non-free item and make it free
+                const nextItem = cart.find(item => !item.isFree);
+                if (nextItem) {
+                    nextItem.isFree = true;
+                    nextItem.price = 0;
+                }
+            }
+            
+            updatePriceDisplay();
+            updateCartCount();
+            renderCartItems();
+            updateUrgencyBanner();
+        }
+        
+        function renderCheckoutSummary() {
+            const summaryItemsContainer = document.querySelector('.summary-items');
+            summaryItemsContainer.innerHTML = '';
+            
+            cart.forEach(item => {
+                let designText = '';
+                if (item.isPreDesigned) {
+                    designText = `Pre-designed: ${item.designName}`;
+                } else if (item.club && item.player) {
+                    designText = `${item.clubText} & ${item.playerText}`;
+                } else if (item.club) {
+                    designText = item.clubText;
+                } else if (item.player) {
+                    designText = item.playerText;
+                } else if (item.customText) {
+                    designText = `Custom Text: "${item.customText}"`;
+                } else if (item.customImage) {
+                    designText = `Custom Image`;
+                }
+                
+                const summaryItem = document.createElement('div');
+                summaryItem.className = 'summary-item';
+                summaryItem.innerHTML = `
+                    <span>${item.phoneModelText} Case (${designText})</span>
+                    <span class="${item.isFree ? 'cart-item-free' : ''}">
+                        ${item.isFree ? 'FREE' : '$' + item.price.toFixed(2)}
+                    </span>
+                `;
+                summaryItemsContainer.appendChild(summaryItem);
+            });
+            
+            // Update totals
+            const subtotal = cart.reduce((sum, item) => sum + item.price, 0);
+            const shipping = 9.95;
+            const total = subtotal + shipping;
+            
+            document.querySelector('.summary-subtotal').textContent = '$' + subtotal.toFixed(2);
+            document.querySelector('.summary-shipping').textContent = '$' + shipping.toFixed(2);
+            document.querySelector('.summary-total-amount').textContent = '$' + total.toFixed(2);
+        }
+        
+        function prepareOrderConfirmation(name, email, address, city, country, zip, total) {
+            const detailsItemsContainer = document.querySelector('.details-items');
+            detailsItemsContainer.innerHTML = '';
+            
+            cart.forEach(item => {
+                let designText = '';
+                if (item.isPreDesigned) {
+                    designText = `Pre-designed: ${item.designName}`;
+                } else if (item.club && item.player) {
+                    designText = `${item.clubText} & ${item.playerText}`;
+                } else if (item.club) {
+                    designText = item.clubText;
+                } else if (item.player) {
+                    designText = item.playerText;
+                } else if (item.customText) {
+                    designText = `Custom Text: "${item.customText}"`;
+                } else if (item.customImage) {
+                    designText = `Custom Image`;
+                }
+                
+                const detailsItem = document.createElement('div');
+                detailsItem.className = 'details-item';
+                detailsItem.innerHTML = `
+                    <span>${item.phoneModelText} Case (${designText})</span>
+                    <span class="${item.isFree ? 'cart-item-free' : ''}">
+                        ${item.isFree ? 'FREE' : '$' + item.price.toFixed(2)}
+                    </span>
+                `;
+                detailsItemsContainer.appendChild(detailsItem);
+            });
+            
+            // Add total
+            const subtotal = cart.reduce((sum, item) => sum + item.price, 0);
+            const shipping = 9.95;
+            const totalPrice = subtotal + shipping;
+            
+            const totalItem = document.createElement('div');
+            totalItem.className = 'details-item';
+            totalItem.innerHTML = `
+                <span><strong>Total</strong></span>
+                <span><strong>$${totalPrice.toFixed(2)}</strong></span>
+            `;
+            detailsItemsContainer.appendChild(totalItem);
+            
+            // Add shipping info
+            const shippingDetails = document.getElementById('shipping-details');
+            shippingDetails.innerHTML = `
+                <p><strong>${name}</strong></p>
+                <p>${email}</p>
+                <p>${address}</p>
+                <p>${city}, ${country} ${zip}</p>
+            `;
+        }
+        
+        function processPayment() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const address = document.getElementById('address').value;
+            const city = document.getElementById('city').value;
+            const country = document.getElementById('country').value;
+            const zip = document.getElementById('zip').value;
+
+            if (!name || !email || !address || !city || !country || !zip) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            const subtotal = cart.reduce((sum, item) => sum + item.price, 0);
+            const shipping = 9.95;
+            const total = subtotal + shipping;
+            const tx_ref = 'TX-' + Date.now();
+
+            const orderDetails = {
+                name: name,
+                email: email,
+                address: address,
+                city: city,
+                country: country,
+                zip: zip,
+                subtotal: subtotal,
+                shipping: shipping,
+                total_amount: total,
+                tx_ref: tx_ref,
+                items: cart.map(item => ({
+                    phone_model: item.phoneModelText,
+                    design_name: item.designName,
+                    club_text: item.clubText,
+                    player_text: item.playerText,
+                    custom_text: item.customText,
+                    case_color: item.caseColor,
+                    price: item.price,
+                    is_free: item.isFree
+                }))
+            };
+
+            // Prepare Telegram message
+            let message = `⚽ *New FootCase Order!* ⚽\n\n`;
+            message += `📦 *Order #${tx_ref}*\n`;
+            message += `💰 *Total: $${total.toFixed(2)}* (Subtotal: $${subtotal.toFixed(2)} + Shipping: $${shipping.toFixed(2)})\n\n`;
+            message += `👤 *Customer Details*\n`;
+            message += `Name: ${orderDetails.name}\n`;
+            message += `Email: ${orderDetails.email}\n`;
+            message += `Address: ${orderDetails.address}, ${orderDetails.city}, ${orderDetails.country} ${orderDetails.zip}\n\n`;
+            message += `🛒 *Order Items*\n`;
+            
+            orderDetails.items.forEach((item, index) => {
+                message += `${index + 1}. ${item.phone_model} Case\n`;
+                if (item.design_name) message += `   - Design: ${item.design_name}\n`;
+                if (item.club_text) message += `   - Club: ${item.club_text}\n`;
+                if (item.player_text) message += `   - Player: ${item.player_text}\n`;
+                if (item.custom_text) message += `   - Custom Text: "${item.custom_text}"\n`;
+                message += `   - Color: ${item.case_color || 'Black'}\n`;
+                message += `   - Price: ${item.is_free ? 'FREE' : '$' + item.price.toFixed(2)}\n\n`;
+            });
+
+            // Start Flutterwave payment
+            FlutterwaveCheckout({
+                public_key: 'FLWPUBK_TEST-412cec8ec569f32d245021695dbed475-X',
+                tx_ref: tx_ref,
+                amount: total,
+                currency: 'USD',
+                payment_options: 'card, mobilemoney, ussd',
+                customer: {
+                    email: email,
+                    phone_number: '',
+                    name: name
+                },
+                customizations: {
+                    title: 'FootCase Order',
+                    description: 'Payment for customized football phone cases',
+                    logo: 'https://example.com/logo.png'
+                },
+                callback: function(response) {
+                    if (response.status === 'successful') {
+                        // Send order details to Telegram
+                        sendToTelegram(message);
+                        
+                        // Show confirmation
+                        prepareOrderConfirmation(name, email, address, city, country, zip, total);
+                        checkoutModal.style.display = 'none';
+                        confirmationModal.style.display = 'block';
+                        
+                        // Clear cart
+                        cart = [];
+                        updateCartCount();
+                        updatePriceDisplay();
+                    } else {
+                        alert('Payment was not successful. Please try again.');
+                    }
+                },
+                onclose: function() {
+                    console.log('Payment modal closed');
+                }
+            });
+        }
+        
+        function sendToTelegram(message) {
+            const BOT_TOKEN = '8125024698:AAGAzmgcIj9LomhYLDjLPfDCYVWgIXGzCqQ';
+            const CHAT_IDS = ['5997177403', '6792580796'];
+            
+            // Format message for Telegram (escape special characters)
+            const formattedMessage = message
+                .replace(/_/g, '\\_')
+                .replace(/\*/g, '\\*')
+                .replace(/\[/g, '\\[')
+                .replace(/\]/g, '\\]')
+                .replace(/\(/g, '\\(')
+                .replace(/\)/g, '\\)')
+                .replace(/~/g, '\\~')
+                .replace(/`/g, '\\`')
+                .replace(/>/g, '\\>')
+                .replace(/#/g, '\\#')
+                .replace(/\+/g, '\\+')
+                .replace(/-/g, '\\-')
+                .replace(/=/g, '\\=')
+                .replace(/\|/g, '\\|')
+                .replace(/\{/g, '\\{')
+                .replace(/\}/g, '\\}')
+                .replace(/\./g, '\\.')
+                .replace(/!/g, '\\!');
+            
+            CHAT_IDS.forEach(chat_id => {
+                fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        chat_id: chat_id,
+                        text: formattedMessage,
+                        parse_mode: 'MarkdownV2'
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.ok) {
+                        console.error('Telegram API error:', data.description);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error sending to Telegram:', error);
+                });
+            });
+            
+            // If there are custom images in the order, send them too
+            cart.forEach(item => {
+                if (item.customImage) {
+                    CHAT_IDS.forEach(chat_id => {
+                        fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                chat_id: chat_id,
+                                photo: item.customImage,
+                                caption: `Custom image for ${item.phoneModelText} case`
+                            })
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (!data.ok) {
+                                console.error('Telegram API error:', data.description);
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error sending image to Telegram:', error);
+                        });
+                    });
+                }
+            });
+        }
+    });
+    </script>
+</body>
+</html>
